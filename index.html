@@ -1,203 +1,197 @@
 <!DOCTYPE html>
 2
-<html>
+<html lang="es">
 3
 <head>
 4
 <meta charset="UTF-8">
 5
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 6
- 
-7
 <title>Feliz Cumpleaños ❤️</title>
+7
+ 
 8
- 
-9
 <style>
+9
+body {
 10
-body{
-11
 font-family: Arial, sans-serif;
+11
+background: #fff0f5;
 12
-background:#fff0f5;
+display: flex;
 13
-display:flex;
+justify-content: center;
 14
-justify-content:center;
+align-items: center;
 15
-align-items:center;
+min-height: 100vh;
 16
-height:100vh;
+margin: 0;
 17
-margin:0;
+}
 18
-text-align:center;
+ 
 19
-}
+.tarjeta {
 20
- 
+background: white;
 21
-.tarjeta{
+padding: 30px;
 22
-background:white;
+border-radius: 20px;
 23
-padding:30px;
+max-width: 500px;
 24
-border-radius:20px;
+text-align: center;
 25
-box-shadow:0 0 15px rgba(0,0,0,.1);
+box-shadow: 0 0 15px rgba(0,0,0,0.1);
 26
-max-width:400px;
-27
 }
-28
+27
  
+28
+h1 {
 29
-button{
+color: #ff4d88;
 30
-background:#ff4d88;
+}
 31
-color:white;
+ 
 32
-border:none;
+input {
 33
-padding:12px 25px;
+padding: 10px;
 34
-border-radius:20px;
+width: 80%;
 35
-cursor:pointer;
+margin-top: 10px;
 36
 }
 37
  
 38
-input{
+button {
 39
-padding:10px;
+background: #ff4d88;
 40
-width:80%;
+color: white;
 41
-margin-top:10px;
+border: none;
 42
-}
+border-radius: 20px;
 43
-</style>
+padding: 12px 25px;
 44
-</head>
+cursor: pointer;
 45
- 
+}
 46
-<body>
+ 
 47
- 
+#resultado {
 48
-<div class="tarjeta">
+margin-top: 15px;
 49
- 
+font-weight: bold;
 50
-<h1>🎂 Feliz Cumpleaños ❤️</h1>
+}
 51
- 
+</style>
 52
-<p>
+</head>
 53
-Tengo una sorpresa para ti...
-54
-pero primero tendrás que resolver un reto.
-55
-</p>
-56
  
+54
+<body>
+55
+ 
+56
+<div class="tarjeta">
 57
-<p>
+<h1>🎂 Feliz Cumpleaños ❤️</h1>
 58
-Reflejo todo lo que ves pero jamás hablo.
+ 
 59
-Estoy contigo cada mañana.
+<p>
 60
-¿Qué soy?
+Tengo una sorpresa para ti, pero primero tendrás que resolver un reto.
 61
 </p>
 62
  
 63
-<input id="respuesta">
+<p>
 64
- 
+Reflejo todo lo que ves pero jamás hablo.
 65
-<br><br>
+Estoy contigo cada mañana.
 66
- 
+¿Qué soy?
 67
-<button onclick="verificar()">
+</p>
 68
-Responder
+ 
 69
-</button>
+<input id="respuesta" placeholder="Escribe tu respuesta">
 70
  
 71
-<p id="resultado"></p>
+<br><br>
 72
  
 73
-</div>
+<button onclick="verificar()">
 74
- 
+Responder
 75
-<script>
+</button>
 76
-function verificar(){
+ 
 77
- 
+<p id="resultado"></p>
 78
-let respuesta =
+</div>
 79
-document.getElementById("respuesta")
+ 
 80
-.value
+<script>
 81
-.toLowerCase()
+function verificar() {
 82
-.trim();
+let respuesta = document
 83
- 
+.getElementById("respuesta")
 84
-if(respuesta=="espejo"){
+.value
 85
- 
+.toLowerCase()
 86
-document.getElementById("resultado")
+.trim();
 87
-.innerHTML =
+ 
 88
-"✅ Correcto. Busca cerca del espejo tu siguiente pista ❤️";
+if (respuesta === "espejo") {
 89
- 
+document.getElementById("resultado").innerHTML =
 90
-}else{
+"✅ Correcto. Busca cerca del espejo tu siguiente pista ❤️";
 91
- 
+} else {
 92
-document.getElementById("resultado")
+document.getElementById("resultado").innerHTML =
 93
-.innerHTML =
-94
 "❌ Intenta nuevamente";
-95
- 
-96
+94
 }
+95
+}
+96
+</script>
 97
  
 98
-}
-99
-</script>
-100
- 
-101
 </body>
-102
+99
 </html>
