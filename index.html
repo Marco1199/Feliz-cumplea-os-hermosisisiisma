@@ -1,197 +1,99 @@
 <!DOCTYPE html>
-2
 <html lang="es">
-3
 <head>
-4
 <meta charset="UTF-8">
-5
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-6
 <title>Feliz Cumpleaños ❤️</title>
-7
- 
-8
-<style>
-9
-body {
-10
-font-family: Arial, sans-serif;
-11
-background: #fff0f5;
-12
-display: flex;
-13
-justify-content: center;
-14
-align-items: center;
-15
-min-height: 100vh;
-16
-margin: 0;
-17
+
+  <style>
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#fff0f5;
+font-family:Arial,sans-serif;
 }
-18
- 
-19
-.tarjeta {
-20
-background: white;
-21
-padding: 30px;
-22
-border-radius: 20px;
-23
-max-width: 500px;
-24
-text-align: center;
-25
-box-shadow: 0 0 15px rgba(0,0,0,0.1);
-26
+
+    .tarjeta{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+max-width:500px;
+box-shadow:0 0 15px rgba(0,0,0,0.1);
 }
-27
- 
-28
-h1 {
-29
-color: #ff4d88;
-30
+
+h1{
+color:#ff4d88;
 }
-31
  
-32
-input {
-33
-padding: 10px;
-34
-width: 80%;
-35
-margin-top: 10px;
-36
+input{
+padding:10px;
+width:80%;
 }
-37
  
-38
-button {
-39
-background: #ff4d88;
-40
-color: white;
-41
-border: none;
-42
-border-radius: 20px;
-43
-padding: 12px 25px;
-44
-cursor: pointer;
-45
+button{
+margin-top:15px;
+padding:12px 25px;
+background:#ff4d88;
+color:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+} 
+
+ #resultado{
+margin-top:15px;
+font-weight:bold;
 }
-46
- 
-47
-#resultado {
-48
-margin-top: 15px;
-49
-font-weight: bold;
-50
-}
-51
 </style>
-52
 </head>
-53
  
-54
 <body>
-55
  
-56
 <div class="tarjeta">
-57
 <h1>🎂 Feliz Cumpleaños ❤️</h1>
-58
  
-59
 <p>
-60
 Tengo una sorpresa para ti, pero primero tendrás que resolver un reto.
-61
-</p>
-62
- 
-63
-<p>
-64
-Reflejo todo lo que ves pero jamás hablo.
-65
+</p>   
+
+  <p>
+Reflejo todo lo que ves, pero jamás hablo.
 Estoy contigo cada mañana.
-66
 ¿Qué soy?
-67
 </p>
-68
  
-69
 <input id="respuesta" placeholder="Escribe tu respuesta">
-70
  
-71
-<br><br>
-72
+<br>
  
-73
 <button onclick="verificar()">
-74
 Responder
-75
 </button>
-76
  
-77
 <p id="resultado"></p>
-78
 </div>
-79
  
-80
 <script>
-81
 function verificar() {
-82
-let respuesta = document
-83
-.getElementById("respuesta")
-84
+let respuesta =
+document.getElementById("respuesta")
 .value
-85
 .toLowerCase()
-86
 .trim();
-87
  
-88
 if (respuesta === "espejo") {
-89
 document.getElementById("resultado").innerHTML =
-90
 "✅ Correcto. Busca cerca del espejo tu siguiente pista ❤️";
-91
 } else {
-92
 document.getElementById("resultado").innerHTML =
-93
 "❌ Intenta nuevamente";
-94
 }
-95
 }
-96
 </script>
-97
- 
-98
+
 </body>
-99
 </html>
