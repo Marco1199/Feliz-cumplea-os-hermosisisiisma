@@ -2,7 +2,7 @@
 
 <html lang="es">
 
- 
+
 
 <head>
 
@@ -15,6 +15,7 @@
 <title>🎳 Tercera Misión</title>
 
  
+
 <style>
 
  
@@ -65,6 +66,20 @@ color:#3366cc;
 
  
 
+input{
+
+padding:12px;
+
+width:220px;
+
+border-radius:10px;
+
+border:1px solid #ccc;
+
+}
+
+ 
+
 button{
 
 background:#3366cc;
@@ -73,17 +88,16 @@ color:white;
 
 border:none;
 
-padding:15px 30px;
+padding:12px 25px;
 
-border-radius:25px;
-
-font-size:16px;
+border-radius:20px;
 
 cursor:pointer;
 
+margin-top:15px;
+
 }
 
- 
 
 #resultado{
 
@@ -91,17 +105,17 @@ margin-top:20px;
 
 font-size:18px;
 
-font-weight:bold;
-
 }
 
  
 
 </style>
+
  
 
 </head>
 
+ 
 
 <body>
 
@@ -109,13 +123,13 @@ font-weight:bold;
 
 <div class="caja">
 
- 
-
 <h1>🎳 Tercera Misión</h1>
 
+ 
 
 <p>
-Hasta ahora has demostrado ser una excelente detective.
+
+Hasta ahora has demostrado ser una gran detective.
 
 </p>
 
@@ -123,7 +137,7 @@ Hasta ahora has demostrado ser una excelente detective.
 
 <p>
 
-Pero esta vez no basta con responder preguntas.
+Pero esta vez tendrás que demostrar que realmente me ganaste en los bolos. 😏
 
 </p>
 
@@ -131,31 +145,27 @@ Pero esta vez no basta con responder preguntas.
 
 <p>
 
-Tendrás que ganarte la siguiente pista.
+Ingresa el código secreto:
 
 </p>
 
  
 
-<h3>
+<input
 
-Tu misión:
+id="codigo"
 
-</h3>
-
- 
-
-<p>
-
-🎳 Ganarme en los bolos.
-
-</p>
+placeholder="DD/MM/AAAA">
 
  
 
-<button onclick="ganaste()">
+<br>
 
-🎉 ¡Ya te gané!
+ 
+
+<button onclick="verificar()">
+
+Desbloquear pista
 
 </button>
 
@@ -163,25 +173,56 @@ Tu misión:
 
 <div id="resultado"></div>
 
- 
-
 </div>
-
 
 <script>
 
  
 
-function ganaste(){
+function verificar(){
 
-document.getElementById("resultado").innerHTML =
+let codigo =
 
-"💃 ¡Lo lograste!<br><br>Ponte algo bonito.<br><br>Porque esta noche vamos a bailar ❤️";
+document.getElementById("codigo")
+
+.value
+
+.trim();
+
+ 
+
+if(codigo=="22/08/2026"){
+
+ 
+
+document.getElementById("resultado").innerHTML=
+
+"💃 ¡Correcto!<br><br>Ponte algo bonito.<br><br>Arréglate como más te guste.<br><br>Porque esta noche vamos a bailar ❤️✨";
+
+ 
+
+}else{
+
+document.getElementById("resultado").innerHTML=
+
+"❌ Ese no es el código secreto.";
+
+ 
 
 }
 
+}
+
+ 
+
 </script>
+
+ 
 
 </body>
 
+ 
+
 </html>
+
+`
