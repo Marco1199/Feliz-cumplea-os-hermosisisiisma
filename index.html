@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+2
+<html>
+3
+<head>
+4
+<meta charset="UTF-8">
+5
+<meta name="viewport" content="width=device-width, initial-scale=1">
+6
+ 
+7
+<title>Feliz Cumpleaños ❤️</title>
+8
+ 
+9
+<style>
+10
+body{
+11
+font-family: Arial, sans-serif;
+12
+background:#fff0f5;
+13
+display:flex;
+14
+justify-content:center;
+15
+align-items:center;
+16
+height:100vh;
+17
+margin:0;
+18
+text-align:center;
+19
+}
+20
+ 
+21
+.tarjeta{
+22
+background:white;
+23
+padding:30px;
+24
+border-radius:20px;
+25
+box-shadow:0 0 15px rgba(0,0,0,.1);
+26
+max-width:400px;
+27
+}
+28
+ 
+29
+button{
+30
+background:#ff4d88;
+31
+color:white;
+32
+border:none;
+33
+padding:12px 25px;
+34
+border-radius:20px;
+35
+cursor:pointer;
+36
+}
+37
+ 
+38
+input{
+39
+padding:10px;
+40
+width:80%;
+41
+margin-top:10px;
+42
+}
+43
+</style>
+44
+</head>
+45
+ 
+46
+<body>
+47
+ 
+48
+<div class="tarjeta">
+49
+ 
+50
+<h1>🎂 Feliz Cumpleaños ❤️</h1>
+51
+ 
+52
+<p>
+53
+Tengo una sorpresa para ti...
+54
+pero primero tendrás que resolver un reto.
+55
+</p>
+56
+ 
+57
+<p>
+58
+Reflejo todo lo que ves pero jamás hablo.
+59
+Estoy contigo cada mañana.
+60
+¿Qué soy?
+61
+</p>
+62
+ 
+63
+<input id="respuesta">
+64
+ 
+65
+<br><br>
+66
+ 
+67
+<button onclick="verificar()">
+68
+Responder
+69
+</button>
+70
+ 
+71
+<p id="resultado"></p>
+72
+ 
+73
+</div>
+74
+ 
+75
+<script>
+76
+function verificar(){
+77
+ 
+78
+let respuesta =
+79
+document.getElementById("respuesta")
+80
+.value
+81
+.toLowerCase()
+82
+.trim();
+83
+ 
+84
+if(respuesta=="espejo"){
+85
+ 
+86
+document.getElementById("resultado")
+87
+.innerHTML =
+88
+"✅ Correcto. Busca cerca del espejo tu siguiente pista ❤️";
+89
+ 
+90
+}else{
+91
+ 
+92
+document.getElementById("resultado")
+93
+.innerHTML =
+94
+"❌ Intenta nuevamente";
+95
+ 
+96
+}
+97
+ 
+98
+}
+99
+</script>
+100
+ 
+101
+</body>
+102
+</html>
