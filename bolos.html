@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+ 
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+
+<title>🎳 Tercera Misión</title>
+
+ 
+<style>
+
+ 
+
+body{
+
+background:#eef5ff;
+
+font-family:Arial, sans-serif;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+margin:0;
+
+}
+
+ 
+
+.caja{
+
+background:white;
+
+max-width:600px;
+
+padding:40px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 0 20px rgba(0,0,0,.1);
+
+}
+
+ 
+
+h1{
+
+color:#3366cc;
+
+}
+
+ 
+
+button{
+
+background:#3366cc;
+
+color:white;
+
+border:none;
+
+padding:15px 30px;
+
+border-radius:25px;
+
+font-size:16px;
+
+cursor:pointer;
+
+}
+
+ 
+
+#resultado{
+
+margin-top:20px;
+
+font-size:18px;
+
+font-weight:bold;
+
+}
+
+ 
+
+</style>
+ 
+
+</head>
+
+
+<body>
+
+ 
+
+<div class="caja">
+
+ 
+
+<h1>🎳 Tercera Misión</h1>
+
+
+<p>
+Hasta ahora has demostrado ser una excelente detective.
+
+</p>
+
+ 
+
+<p>
+
+Pero esta vez no basta con responder preguntas.
+
+</p>
+
+ 
+
+<p>
+
+Tendrás que ganarte la siguiente pista.
+
+</p>
+
+ 
+
+<h3>
+
+Tu misión:
+
+</h3>
+
+ 
+
+<p>
+
+🎳 Ganarme en los bolos.
+
+</p>
+
+ 
+
+<button onclick="ganaste()">
+
+🎉 ¡Ya te gané!
+
+</button>
+
+ 
+
+<div id="resultado"></div>
+
+ 
+
+</div>
+
+
+<script>
+
+ 
+
+function ganaste(){
+
+document.getElementById("resultado").innerHTML =
+
+"💃 ¡Lo lograste!<br><br>Ponte algo bonito.<br><br>Porque esta noche vamos a bailar ❤️";
+
+}
+
+</script>
+
+</body>
+
+</html>
